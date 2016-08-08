@@ -48,7 +48,7 @@ def make_shell_context():
 	return dict(app=app,db=db,User=User,Role = Role)
 manager.add_command("shell",Shell(make_context = make_shell_context))
 
-@app.route('/', methods=['GET', 'POST']) 
+@app.route('/', methods=['GET', 'POST'])
 def index():
 	form = NameForm()
 	if form.validate_on_submit():
